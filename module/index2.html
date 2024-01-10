@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Module</title>
+  </head>
+
+  <body>
+    <!-- <script type="module">
+      alert(typeof button);
+    </script>
+
+    <script>
+      alert(typeof button);
+    </script>
+    <button id="button">Button</button> -->
+
+    <script async type="module">
+      import { play } from "./play.js";
+
+      play();
+    </script>
+
+    <script type="module">
+      alert("type=module script");
+    </script>
+
+    <script nomodule>
+      alert("현재 구형브라우저를 사용하고 있습니다.");
+      alert("그래서 모듈 스크립트를 사용할 수 없습니다.");
+    </script>
+  </body>
+</html>
