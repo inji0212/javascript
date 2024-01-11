@@ -37,6 +37,11 @@
 // objectList.c = "c"
 // console.log(objectList);
 
+
+//var==> 함수 레벨 스코프
+//함수 안에서 사용가능
+//함수 밖에서는 사용 불가
+
 // function func() {
 //     if (true) {
 //         var a = 'a';
@@ -50,6 +55,10 @@
 
 
 
+//let, const ==>block레벨 스코프
+//if 안에서만 사용가능
+//밖에선 오류 
+
 // function func() {
 //     if (true) {
 //         let a = 'a';
@@ -60,8 +69,11 @@
 
 // console.log(a); // ReferenceError: a is not defined
 
-let hello;
+
+//let은 호스팅되고 undefined이 할당되어 출력
+
 console.log(hello);
+let hello;
 
 
 
@@ -70,6 +82,9 @@ console.log(hello);
 // var a; // 5
 
 
+//let, const는 호스팅은되나
+//초기 undefined이 안되어 에러
+
 // console.log(greeting);
 // // Uncaught ReferenceError: Cannot access 'greeting' before initialization
 // const greeting = "hello";
@@ -77,6 +92,8 @@ console.log(hello);
 // console.log(greeting);
 // // undefined
 // let greeting = "hello";
+
+
 
 // func(); //hoisting test
 

@@ -25,14 +25,17 @@ val = Number(true);
 val = Number(false);
 val = Number(null);
 val = Number('hello');
-val = Number([1, 2, 3]);
+val = Number([1, 2, 3]); 
+//NaN= Not a Number
 
 val = parseInt('111.40');
 val = parseFloat('111.40');
+//소수점 있는 넘버변환
 
 // Output
 console.log(val);
 console.log(typeof val);
+console.log(val.length);
 console.log(val.toFixed(2));
 
 const val1 = String(2);
