@@ -29,6 +29,8 @@ val = window.scrollX;
 
 
 // Location Object
+// 위치
+
 val = window.location;
 val = window.location.hostname;
 val = window.location.port;
@@ -36,6 +38,8 @@ val = window.location.href;
 val = window.location.search;
 
 // Redirect
+// 경로 이동시켜준다
+
 window.location.href = 'http://google.com';
 //Reload
 window.location.reload();
@@ -44,6 +48,11 @@ window.location.reload();
 
 window.history.go(-2);
 val = window.history.length;
+
+//window에서 실행가능
+// 앞페이지로 , 뒤페이지로
+history.forward();
+history.back();
 
 // Navigator Object
 val = window.navigator;

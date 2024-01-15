@@ -44,6 +44,8 @@ do {
 while (i < 10);
 
 // LOOP THROUGH ARRAY
+// 배열을 루프로 컨트롤
+
 const locations = ['서울', '부산', '경기도', '대구'];
 
 // FOR

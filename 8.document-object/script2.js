@@ -1,11 +1,11 @@
 // // 파라미터로 전달한 ID를 가진 태그를 반환
-// document.getElementById(요소아이디)
+// document.getElementById(요소아이디) #name
 
 // // 파라미터로 전달한 name 속성을 가진 태그를 반환
-// document.getElementByName(name속성값)
+// document.getElementByName(name속성값) .name
 
 // // 파라미터로 전달한 선택자에 맞는 첫 번째 태그를 반환
-// document.querySelector(선택자)
+// document.querySelector(선택자) 
 
 // // document.getElementById()
 // console.log(document.getElementById('header-container'));
