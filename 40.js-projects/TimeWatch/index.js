@@ -1,3 +1,7 @@
+//appendTens 가 100이 되면 appendSeconds 1올림
+// setInterval 1000ms->1s
+//10ms-> appendTens 1 올림
+
 const appendTens = document.getElementById("tens")
 const appendSeconds = document.getElementById("seconds")
 const buttonStart = document.getElementById('button-start');
@@ -10,8 +14,12 @@ let Interval;
 buttonStart.onclick = function () {
     // 기존에 있던 setInterval 없애고 
     clearInterval(Interval);
+    //셋인터벌을 멈춰주려면
+
+     
     // 다시 setInterval 시작
     Interval = setInterval(startTimer, 10);
+    // startTimer함수로 받고, 10ms마다 함수 호출
 }
 
 buttonStop.onclick = function () {

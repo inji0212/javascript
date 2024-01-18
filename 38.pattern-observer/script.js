@@ -1,3 +1,7 @@
+//event-driven 시스템 사용
+//관찰하는 패턴 ex.팔로우 구독하면 알림 
+
+
 const pinkBtn = document.getElementById('pink-btn');
 const blueBtn = document.getElementById('blue-btn');
 

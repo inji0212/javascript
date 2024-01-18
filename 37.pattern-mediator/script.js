@@ -1,3 +1,8 @@
+//중재를 통해 필터링하고 보내는것
+//ex. 스팸을 한번 거르고 카톡보내기 
+// 챗룸에서 파티시펜트 로 가서 센드 메세지 다시호출
+//챗룸이 중재자
+
 class Participant {
     constructor(name) {
         this.name = name
@@ -43,6 +48,8 @@ chatRoom.enter(user1)
 chatRoom.enter(user2)
 chatRoom.enter(user3)
 
+console.log(chatRoom)
+console.log(user1)
 user1.send('Hello', user2)
 user2.send('Nice meet to you', user1)
 user3.send('Boring....', user1)

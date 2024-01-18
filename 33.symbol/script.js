@@ -1,10 +1,24 @@
+// 원시타입 유니크한 식별자
+//symbol("5")형태만 가능
+
+
+
+
 // const sym1 = Symbol();
 // const sym2 = Symbol();
+//두개가 같아 보이더라도 항상 유니크한 값을 준다.
 
 // console.log(sym1 === sym2); //false
 
 // const sym3 = Symbol('hi');
 // console.log(sym3.description);
+// description 넣어줄 수 있따.
+//=> hi 출력
+
+
+
+
+//symbol언제 사용해야할까????
 
 // let carA = {
 //     id: 1,
@@ -15,11 +29,14 @@
 
 // const idSym = Symbol('id');
 // carA[idSym] = 300;
-
+//어떤 값이든 같은 값일 수 없다.
+ 
 // console.log(carA);
-
+//=> 그대로 호출되고 마지막에 carA[id]:300호출됨
 
 // carA.id = 300;
+
+
 
 // const idSym = Symbol('id');
 // let carA = {
@@ -31,6 +48,11 @@
 // }
 
 
+
+// for문 과 Object.getOwnPropert에서 제외된다.
+// 단 Object.getOwnPropertySymbols하면 호출된다.
+
+
 // for (const key in carA) {
 //     console.log(key);
 // }
@@ -39,8 +61,13 @@
 
 // console.log(Object.getOwnPropertySymbols(carA));
 
+
+// Symbol.for은 전역심볼이 되어 
+// 같은 () 가졌을 떄 같은 값을 가진다.
 // console.log(Symbol.for('id') === Symbol.for('id'));
 // true
+
+
 
 // // description을 이용해 심볼을 찾음
 // let sym = Symbol.for("name");
@@ -51,6 +78,8 @@
 // alert(Symbol.keyFor(sym2)); // id
 
 
+
+//-----------------------------------------
 // const RED = 'red';
 // const ORANGE = 'orange';
 // const YELLOW = 'yellow';
@@ -74,7 +103,7 @@
 
 // console.log(getImportantLevel(BLUE));
 // console.log(getImportantLevel(dog));
-
+// 에도 blue값이 나와 실수된다.
 
 // const RED = Symbol('red');
 // const ORANGE = Symbol('orange');
@@ -99,6 +128,8 @@
 
 // console.log(getImportantLevel(BLUE));
 // console.log(getImportantLevel(dog));
+//이렇게 해야 실수없이 다른 값이 호출된다.
+
 
 
 // class Car {
@@ -121,6 +152,9 @@
 //     console.log(car, myCars[car]);
 // }
 
+
+// length 부분만 출력하지 않고 싶다면??
+// 심보 값으로 this.[length]으로 바꿔사용해줘야한다.
 
 // const length = Symbol('length');
 // class Car {

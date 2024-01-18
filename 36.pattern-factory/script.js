@@ -1,3 +1,5 @@
+//비슷한 객체를 반복적으로 많이 생성해야할때
+
 // const book1 = {
 //     title: 'Harry Potter',
 //     author: 'JK Rowling',
@@ -16,6 +18,7 @@
 //     isbn: 'EF789',
 // };
 
+//팩토리 함수 
 const createBook = (title, author, isbn) => ({
     title,
     author,

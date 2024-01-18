@@ -1,6 +1,7 @@
 let instance;
-
+// 하나의 객체로 제한두는디자인 패턴 그룹화
 // 1. 생성자에서 하나의 인스턴스만 생성될 수 있게 로직 작성
+
 class Counter {
     constructor() {
         if (instance) {
