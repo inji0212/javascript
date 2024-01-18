@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Event Bubbling</title>
+    <style>
+        body * {
+            margin: 10px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <form>FORM
+        <div>DIV
+            <p>P</p>
+        </div>
+    </form>
+    <script>
+        const form = document.querySelector('form');
+        const div = document.querySelector('div');
+        const p = document.querySelector('p');
+
+        form.onclick = function (event) {
+            event.target.style.backgroundColor = 'yellow';
+            //event target은 실제 이벤트가 시작된 타깃 요소
+            //this (event.currentTarget)==> 핸들러가 할당된 요소
+            
+            // chrome needs some time to paint yellow
+            setTimeout(() => {
+                alert("target = " + event.target.tagName + ", this=" + this.tagName);
+                event.target.style.backgroundColor = ''
+            }, 0);
+        };
+    </script>
+</body>
+
+</html>
