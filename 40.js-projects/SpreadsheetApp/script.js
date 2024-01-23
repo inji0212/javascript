@@ -21,9 +21,11 @@ class Cell {
 }
 
 exportBtn.onclick = function (e) {
+    // 1,2,3..형태의 데이터로 저장
     let csv = "";
     for (let i = 0; i < spreadsheet.length; i++) {
-        if (i === 0) continue;
+        
+        if (i === 0) continue;// 1칸 헤더라 빈칸인 것을 해결해줌
         csv +=
             spreadsheet[i]
                 .filter(item => !item.isHeader)
@@ -31,6 +33,7 @@ exportBtn.onclick = function (e) {
                 .join(',') + "\r\n";
     }
 
+    //데이터 다운로드
     const csvObj = new Blob([csv]);
     console.log('csvObj', csvObj);
 
@@ -39,6 +42,7 @@ exportBtn.onclick = function (e) {
 
     const a = document.createElement("a");
     a.href = csvUrl;
+    //엑셀파일이름
     a.download = 'spreadsheet name.csv';
     a.click();
 }
@@ -97,10 +101,11 @@ function createCellEl(cell) {
 
     cellEl.onclick = () => handleCellClick(cell);
     cellEl.onchange = (e) => handleOnChange(e.target.value, cell);
-
+    // 셀에 타이핑한 데이터 저장
     return cellEl;
 }
 
+//데아터 저장하는 함수
 function handleOnChange(data, cell) {
     cell.data = data;
 }
@@ -117,12 +122,13 @@ function handleCellClick(cell) {
     document.querySelector("#cell-status").innerHTML = cell.columnName + cell.rowName;
 }
 
+//클릭된 부분을 리셋시켜야함
 function clearHeaderActiveStates() {
     const headers = document.querySelectorAll('.header');
-
+    
     headers.forEach((header) => {
         header.classList.remove('active');
-    })
+    })//헤더를 가진 것을 모두 리셋
 }
 
 function getElFromRowCol(row, col) {
